@@ -7,7 +7,7 @@ import Card from './../components/card';
 const Home = () => {
 
     let randomCards = []
-    let test;
+    let tests;
 
     for (let i = 0; i < 5; i++) {
         let randomNumber = Math.floor(Math.random() * 3000) + 1;
