@@ -1,0 +1,60 @@
+
+body{
+    background-color: #f9f9f9;
+    font-family: 'Tajawal', sans-serif;
+    overflow-y: scroll;
+}
+
+
+
+
+  #sliderBg{
+    background-color: rgb(196, 183, 183)
+    
+
+  };
+
+  .test{
+    scale: .5;
+  }
+
+.wood-bg{
+  background-image: url("https://previews.dropbox.com/p/thumb/AB6Po121ibjoN4VxjTs3xUu7qtzsGmG7VW7I7GDFdEsfdiISFtvemHfTC6HPH4rvi0VcmMMwJ9HvMyfxbRfg2RbeZd2YN_wqGDr7N9u5uUVM9Y1x-70KE8oxEws_acpDlQSGmpRycvMg6DAb7Po2TP6b55GDZuwonqNGpILwQfWsdKsJb4YBNdAfC3X0eDPlU2ogN4DkUN7Xb6t3fjqz-PmaGeiRMssDIQTuk6Dal6zDCP9wIjMJ9KMV-u3v9Zqr8gMdB72yNEGTOq1HObYSnsMWW7XC8ByUl9UOCMElUf-Xmhv09zVPaS_4zoieW5xga4WsMAO4MZI9NvLTdmfuACqOSbSsOo0-NU0fzKXb65JUNhvvDlO_04jlSUF6SuyTZAs/p.jpeg");
+}
+
+.catCard::-webkit-scrollbar{
+  background-color: #373c49;
+  height: 15px;
+}
+
+.catCard::-webkit-scrollbar-thumb{
+  background-color: white;
+  border-radius: 5px;
+  width: 10px;
+}
+
+.active{
+  background-color: white;
+  color: #22c55e;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position:  0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background: linear-gradient(to right, #f3f3f3 0%, #c2bdbd 50%, #f3f3f3 100%);
+  background-size: 200% 200%;
+  animation: gradient 1.5s ease-in-out infinite;
+}
+
