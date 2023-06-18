@@ -40,11 +40,12 @@ class App extends Component {
         return (
             <>
 
-                <NavBar />
 
-            <div style={{"height":"100%"}}>
-                
-                <Routes>
+<div className="flex flex-col min-h-screen">
+  <main className="flex-grow">
+    <NavBar />
+
+    <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path="/home"  element={<Navigate to="/" replace />}  />
                     <Route path='/book/:index' element={<Book />} />
@@ -55,10 +56,18 @@ class App extends Component {
                     <Route path='/otherwebsites' element={<OtherWebSites />} />
                     <Route path='*' element={<h1 className='text-center text-4xl mt-10 '>Error page <br />حدث خطأ</h1>} />
                 </Routes>
-            </div>
+
+  </main>
+  
+        <Footer  />
+</div>
+
+                
+                
+                
 
 
-                <Footer  />
+                
             </>
         );
     }

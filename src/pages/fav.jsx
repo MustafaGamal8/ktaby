@@ -29,7 +29,7 @@ const Favorites = () => {
 
 
     return (
-        <div className="w-4/5 m-auto bg-white ">
+        <div className="w-4/5 m-auto bg-white " >
             <h1 className="text-3xl text-center mt-3">  <i className='fa-solid fa-heart text-2xl text-red-400' ></i> المفضلة</h1>
 
             <div className="w-full  m-auto md:mt-8 flex flex-col items-center bg-white shadow-lg ">
