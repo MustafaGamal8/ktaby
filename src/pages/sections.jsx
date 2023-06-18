@@ -52,7 +52,7 @@ const Sections = () => {
       }, [sec]);
     
     return (
-        <>
+        <div  >
             <h1 className="text-center font-semibold mt-7 text-4xl">{sec}</h1>
 
             <div className="container mx-auto py-8 flex flex-wrap gap-8 items-center justify-center">
@@ -62,10 +62,10 @@ const Sections = () => {
     return (
       <div
         className="bg-white w-52 h-80 hover:z-10 mb-5"
-        key={index}// Customize the size here
+        key={index}
       >
 
-        <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transform hover:-translate-y-2 hover:scale-105 transition-all duration-100 ">
+        <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transform hover:-translate-y-2 hover:scale-105 transition-all duration-150 ">
             
         <Link to={`/book/${b.bookIndex}`} className="cursor-pointer h-full w-full">
           <LazyLoadImage
@@ -110,7 +110,7 @@ const Sections = () => {
 
 
 
-        </>
+        </div>
     );
 };
 

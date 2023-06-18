@@ -11,7 +11,7 @@ function Card({ bookTitle, bookCover, bookIndex }) {
 
   return (
     
-    <Link to={`/book/${bookIndex}`} onClick={scrollToTop}>
+    <Link to={`/book/${bookIndex}`} onClick={scrollToTop} className='flex items-center justify-center '>
       <div className="relative drop-shadow-2xl flex flex-col items-center justify-between h-full w-52 md:w-80 cursor-pointer rounded-md">
             <LazyLoadImage
             className="w-full h-full rounded-md"
@@ -20,7 +20,7 @@ function Card({ bookTitle, bookCover, bookIndex }) {
               effect="blur"
             />
 
-            <div className="opacity-0 rounded-md transition-all duration-150 hover:opacity-50 bg-black h-full w-full white absolute top-0 right-0 flex items-center justify-center text-white text-lg md:text-4xl text-center">
+            <div className="opacity-0 rounded-md transition-all duration-150 hover:opacity-50 bg-black h-full w-full white absolute top-0 right-0 flex items-center justify-center text-white  md:text-4xl text-sm text-center">
               <h2>{bookTitle}</h2>
             </div>
       </div>

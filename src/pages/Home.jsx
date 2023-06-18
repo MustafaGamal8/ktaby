@@ -3,6 +3,7 @@ import Slider from './../components/slider';
 import { v4 as uuidv4 } from "uuid";
 import data from "../data/db.json";
 import Card from './../components/card';
+import MainBooks from '../components/mainBooks';
 
 const Home = () => {
 
@@ -26,6 +27,11 @@ const Home = () => {
 return (
          <>
          <Slider randomCards={randomCards} />
+
+         <MainBooks />   
+
+         
+
     </> );
 }
  

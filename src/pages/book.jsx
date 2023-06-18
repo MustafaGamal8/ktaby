@@ -13,6 +13,14 @@ const Book = () => {
     const { index } = useParams();
     let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
     const [fav, setFav] = useState(favorites.includes(index))
+    const [showNotification, setShowNotification] = useState(false);
+
+  const handleAddToFavorites = () => {
+    setShowNotification(true);
+    setTimeout(() => {
+      setShowNotification(false);
+    }, 2000); // Hide the notification after 2 seconds
+  };
     
     const book = {
         bookCover: data[index].cover,
@@ -30,6 +38,7 @@ const Book = () => {
         if (!favorites.includes(index)) {
             favorites.push(index);
             localStorage.setItem('favorites', JSON.stringify(favorites));
+            handleAddToFavorites()
 
         } else {
             favorites = favorites.filter(obj => obj !== index)
@@ -37,6 +46,7 @@ const Book = () => {
             localStorage.setItem('favorites', JSON.stringify(favorites));
 
         }
+
     }
 
     let result = [];
@@ -47,7 +57,7 @@ const Book = () => {
         result = [];
         let count = 0;
 
-        let randomNumber = Math.floor(Math.random() * 3000) + 1;
+        let randomNumber = Math.floor(Math.random() * 2900) + 1;
 
         for (var i = randomNumber; i < data.length; i++) {
             var b = data[i];
@@ -116,7 +126,7 @@ const Book = () => {
 
                     <div className='group  bg-green-300 rounded-bl-full rounded-br-full lg:bg-green-400  lg:w-max lg:p-10 lg:rounded-none flex justify-center w-full overflow-hidden'>
                         <div className='  lg:w-max lg:bg-white lg:p-5  '>
-                            <img src={book.bookCover} alt="error" className='h-full w-96 rounded  drop-shadow-xl  group-hover:scale-110 duration-500' />
+                            <img src={book.bookCover} alt="error" className='h-full w-96 rounded  drop-shadow-xl  group-hover:scale-105 duration-500' />
                         </div>
                     </div>
                 </div>
@@ -171,10 +181,30 @@ const Book = () => {
 
             <div className='w-4/5 m-auto shadow bg-white mt-20  select-none py-1 '>
                 <h1 className='text-center font-semibold text-2xl mb-5 text-green-400'>عشوائي</h1>
-                <div className='catCard h-full flex items-center justify-center  gap-3 overflow-x-scroll md:scale-90 pb-4 shadow'>
+                <div className='catCard h-full flex  items-center justify-between  gap-3 overflow-x-scroll md:scale-90 pb-4 shadow '>
                     {randomBooksList.map((b) => <div onClick={() => setFav(false)} key={b.key}>{b.content}</div>)}
                 </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <div className="fixed top-0 right-0 mt-4 mr-4">
+      
+      {showNotification && (
+        <div className="bg-green-500 text-white py-2 px-4 rounded mt-2">
+         <FontAwesomeIcon icon={faHeart} /> تم الاضافة الي المضلة 
+        </div>
+      )}
+    </div>
         </>);
 
 }

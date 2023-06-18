@@ -4,19 +4,26 @@ import { Link } from 'react-router-dom';
 
 import { v4 as uuidv4 } from "uuid";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrash, faDownload, faEye } from '@fortawesome/free-solid-svg-icons';
+import { faTrash, faDownload, faEye, faHeart, faCross } from '@fortawesome/free-solid-svg-icons';
 
 
 const Favorites = () => {
     
     const storedFavorites = JSON.parse(localStorage.getItem('favorites'));
   const [favorites, setFavorites] = useState(storedFavorites || []);
+  const [showNotification, setShowNotification] = useState(false);
 
   const handleDelete = (index) => {
     const updatedFavorites = favorites.filter((obj) => obj !== index);
     setFavorites(updatedFavorites);
 
       localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+  };
+  const handleRemoveFromFavorites = () => {
+    setShowNotification(true);
+    setTimeout(() => {
+      setShowNotification(false);
+    }, 2000); // Hide the notification after 2 seconds
   };
 
 
@@ -47,7 +54,7 @@ const Favorites = () => {
                             </div>
 
                             <div className="flex gap-5 mt-3 items-center justify-center lg:flex-nowrap flex-wrap">
-                                <div className="group text-center gap-2 w-20 h-10 bg-white rounded shadow p-2 cursor-pointer hover:bg-red-400 hover:text-white whitespace-nowrap" onClick={() => handleDelete(b)}>
+                                <div className="group text-center gap-2 w-20 h-10 bg-white rounded shadow p-2 cursor-pointer hover:bg-red-400 hover:text-white whitespace-nowrap" onClick={() => {handleDelete(b); handleRemoveFromFavorites()}}>
                                     <FontAwesomeIcon icon={faTrash} className="text-red-400 group-hover:text-white" /> حذف
                                 </div>
                                 <div className="group text-center w-20 h-10 bg-white rounded shadow p-2 cursor-pointer hover:bg-green-400 hover:text-white whitespace-nowrap">
@@ -66,6 +73,16 @@ const Favorites = () => {
 
                     )
                 })}
+
+
+<div className="fixed top-0 right-0 mt-4 mr-4">
+      
+      {showNotification && (
+        <div className="bg-green-500 text-white py-2 px-4 rounded mt-2">
+         <FontAwesomeIcon icon={faTrash} className="text-red-400" /> تم الازالة من المضلة
+        </div>
+      )}
+    </div>
 
 
 

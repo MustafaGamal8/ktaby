@@ -83,3 +83,31 @@ animation: navBarMenu 2s forwards;
     }
   }
   
+
+
+  .myName{
+    position: relative;
+    margin-top: 10px;
+}
+.myName::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right:  0;
+    width: 100%;
+    height: 100%;
+    background-color: #f9f9f9;
+    border-left: 2px solid #22c55e;
+    animation: myNameAnimation 5s infinite;
+}
+@keyframes myNameAnimation {
+    0%{
+        width: 100%;
+    }
+    80%{
+        width: 0%;
+    }
+    100%{
+        width: 0%;
+    }
+}
