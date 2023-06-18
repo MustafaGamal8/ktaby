@@ -77,7 +77,7 @@ const MainBooks = () => {
 
             <div id="Books" className=" bg-white mt-12">
                 <div className="flex flex-col items-end">
-                    <p className="text-right  p-5">عدد الكتب الموجودة <span className="text-green-400">{loaded}</span> من <span className="text-green-400">{Data.length}</span></p>
+                    <p className="text-right  p-5">عدد الكتب الموجودة   <span className="text-green-400">{loaded-10} - </span><span className="text-green-400">{loaded}</span> من <span className="text-green-400">{Data.length}</span></p>
                     <div className="  bg-green-500 cursor-pointer rounded-lg drop-shadow-md  text-white p-5 hover:bg-green-600 shadow  w-max m-5" onClick={() => setscrollStyle(!scrollStyle)}>تغير الشكل</div>
 
                 </div>
