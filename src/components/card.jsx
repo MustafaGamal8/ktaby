@@ -8,6 +8,7 @@ function Card({ bookTitle, bookCover, bookIndex }) {
       top: 0,
     });
   }
+  // console.log(bookIndex)
 
   return (
     
