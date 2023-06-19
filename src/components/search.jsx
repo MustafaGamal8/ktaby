@@ -48,7 +48,7 @@ const Search = () => {
           return false;
       });
       setBooks(filteredBooks);
-      console.log(books[0])
+      setSearchSuggestions([])
     }
   };
 
@@ -66,6 +66,7 @@ const Search = () => {
           id='bookSearch'
           type="text"
           placeholder="ابحث عن الكتب"
+          autoComplete='off'
           value={searchTerm}
           onChange={handleInputChange}
           className="flex-grow bg-transparent outline-none text-white placeholder-white text-right"
@@ -76,7 +77,7 @@ const Search = () => {
       </form>
 
       {searchSuggestions.length > 0 && (
-        <ul className="bg-white mt-2 p-2 rounded-lg">
+        <ul className="bg-white mt-2 p-2 rounded-lg text-right">
           {searchSuggestions.map((suggestion) => (
             <li
               key={uuidv4()}
