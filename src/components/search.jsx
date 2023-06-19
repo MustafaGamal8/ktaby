@@ -90,7 +90,9 @@ const Search = () => {
         </ul>
       )}
 
-      <h1 className='w-full text-right mt-5'>عدد الكتب المطابقة للبحث <span className='text-green-400'>{books.length}</span></h1>
+       {books.length > 0 ? <h1 className='w-full text-right mt-5'>عدد الكتب المطابقة للبحث <span className='text-green-400'>{books.length}</span></h1>
+      :null
+    } 
       <div className='catCard flex overflow-x-scroll overflow-y-hidden p-5 gap-8'>
         {books.map((b) => (
             
