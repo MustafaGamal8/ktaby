@@ -45,15 +45,5 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "tailwind.config.js",
   "author": "",
-  "license": "ISC",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mustafagamal51112/ktaby.git"
-  },
-  "bugs": {
-    "url": "https://github.com/mustafagamal51112/ktaby/issues"
-  },
-  "homepage": "https://github.com/mustafagamal51112/ktaby#readme",
-  "keywords": []
+  "license": "ISC"
 }
