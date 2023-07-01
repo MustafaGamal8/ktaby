@@ -76,7 +76,7 @@ const Search = () => {
         </label>
       </form>
 
-      {searchSuggestions.length > 0 && (
+      {searchSuggestions.length < 10 && (
         <ul className="bg-white mt-2 p-2 rounded-lg text-right">
           {searchSuggestions.map((suggestion) => (
             <li
@@ -93,10 +93,12 @@ const Search = () => {
        {books.length > 0 ? <h1 className='w-full text-right mt-5'>عدد الكتب المطابقة للبحث <span className='text-green-400'>{books.length}</span></h1>
       :null
     } 
-      <div className='catCard flex overflow-x-scroll overflow-y-hidden p-5 gap-8'>
+      <div className='catCard flex overflow-x-scroll overflow-y-hidden p-5 gap-8 snap-x '>
         {books.map((b) => (
             
-          <Card key={uuidv4()} bookCover={b.cover} bookIndex={b.index} bookTitle={b.title} />
+          <div className='snap-center'>
+            <Card key={uuidv4()} bookCover={b.cover} bookIndex={b.index} bookTitle={b.title} />
+          </div>
         ))}
       </div>
     </div>

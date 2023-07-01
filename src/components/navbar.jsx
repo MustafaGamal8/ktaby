@@ -6,7 +6,7 @@ import { NavLink, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook, faQuestion, faHeart, faHouse, faList } from '@fortawesome/free-solid-svg-icons';
 
-
+// Git tts
 
 
 const NavBar = () => {
@@ -31,7 +31,7 @@ const NavBar = () => {
 
     return (
         <nav className='select-none'>
-            <div className='flex items-center justify-between p-5 bg-white drop-shadow-sm h-16 '>
+            <div className='flex  items-center justify-between p-5 bg-white drop-shadow-sm h-16 '>
                 <div className='text-center cursor-pointer group'><Link to={"/help"}><h1><FontAwesomeIcon icon={faQuestion} className="text-green-500 group-hover:scale-150 transition-all duration-300" /> <br />مساعدة</h1></Link></div>
                 <h1 className='text-2xl font-semibold'><Link to={"/"}><FontAwesomeIcon icon={faBook} className='text-gray-700 mr-2' /> كتابي</Link></h1>
 

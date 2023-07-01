@@ -6,7 +6,7 @@ const Me = () => {
   return (
     <div className="container m-auto  mt-10 flex flex-col items-center" style={{"height":"100vh"}}>
       <div className="myImg border-4 border-green-500 rounded-full w-72 flex justify-center items-center overflow-hidden">
-        <img src="https://khair-ten.vercel.app/asset/me.jpeg" alt="" className="w-full h-full rounded-full transition-all duration-500 user-select-none -webkit-user-drag-none hover:scale-150" />
+        <img src="../assets/me.jpeg" alt="" className="w-full h-full rounded-full transition-all duration-500 user-select-none -webkit-user-drag-none hover:scale-150" />
       </div>
 
       <h1 className="myName relative mt-10 font-semibold text-xl">
