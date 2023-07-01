@@ -1,7 +1,7 @@
 # Ktaby
 
 
-This project was created by [mustafa Gamal](https://www.linkedin.com/in/mustafa-gamal-ba48a7243/p).
+This project was created by [mustafa Gamal](https://www.linkedin.com/in/mustafa-gamal-ba48a7243/).
 
 ## descrabtion
 
