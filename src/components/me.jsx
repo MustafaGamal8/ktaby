@@ -1,12 +1,12 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faFacebook, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-
+import myPhoto from "../assets/me.jpeg"
 const Me = () => {
   return (
     <div className="container m-auto  mt-10 flex flex-col items-center" style={{"height":"100vh"}}>
       <div className="myImg border-4 border-green-500 rounded-full w-72 flex justify-center items-center overflow-hidden">
-        <img src="../assets/me.jpeg" alt="" className="w-full h-full rounded-full transition-all duration-500 user-select-none -webkit-user-drag-none hover:scale-150" />
+        <img src={myPhoto} alt="" className="w-full h-full rounded-full transition-all duration-500 user-select-none -webkit-user-drag-none hover:scale-150" />
       </div>
 
       <h1 className="myName relative mt-10 font-semibold text-xl">

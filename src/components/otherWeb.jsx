@@ -1,4 +1,4 @@
-
+import khair_ScreenShoot from"../assets/khair_ScreenShoot.png" ;
 const OtherWebSites = () => {
     return ( 
     <div className="container m-auto  " style={{"height":"100vh"}}>
@@ -11,7 +11,7 @@ const OtherWebSites = () => {
 
     <a href="https://khair-ten.vercel.app/" target="_blank" rel="noopener noreferrer" className="relative group bg-white  h-80 drop-shadow-xl">
       <div className="bg-white w-full h-full  rounded-lg  overflow-hidden ">
-        <img  className="object-cover w-full  transition duration-300 ease-in-out transform hover:z-10  hover:scale-105" src="../assets/Screenshot 2023-06-18 165049.png" alt="Website Screenshot" />
+        <img  className="object-cover w-full  transition duration-300 ease-in-out transform hover:z-10  hover:scale-105" src={khair_ScreenShoot} alt="Website Screenshot" />
       </div>
       <div className="bg-green-400 w-56 h-16 flex justify-center items-center absolute bottom-0 right-0 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out ">
         <p className="text-white font-bold">اضغط للزيارة</p>
